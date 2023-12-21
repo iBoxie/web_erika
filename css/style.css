@@ -1,0 +1,88 @@
+* { /* Sirve para reiniciar las propiedas que cada navegador pone por defecto */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Todo los valores VH (V-Viewport[TamañoVentana], H-Height[Altura]), dice que ocupara la altura en % del tamaño de tu ventana actual del navegador */
+/* La distribución, es una estructura básica de maquetación, cambiala a tu gusto */
+
+body {
+  background-color: #222; /* El color es para que veas el espacio visual que ocupa, si lo tienes claro, comenta la línea entera */
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* A partir de aquí puedes meter el background image que quieras */
+  position: relative; /* Sirve para anclar un elemento que a continuación irá en Absolut */
+}
+
+header {
+  background-color: rgba(0, 0, 255, 0.6); /* El color es para que veas el espacio visual que ocupa, si lo tienes claro, comenta la línea entera */
+  top: 0;
+  width: 70%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute; /* Aquí esta el elemento con Absolut, sirve para poder ponerlo por encima de todos los elementos */
+  z-index: 99999; /* Es una coña usar este valor pero así te queda claro que va por encima de todo, si vieses en capas 3D la web, estaría 99999 posiciones por encima */
+}
+
+header nav {
+  background-color: rgba(137, 43, 226, 0.8); /* El color es para que veas el espacio visual que ocupa, si lo tienes claro, comenta la línea entera */
+  width: 80%;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul{
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    /*Puedes meter aquí el color para el enlace*/
+}
+
+
+main {
+  background-color: bisque; /* El color es para que veas el espacio visual que ocupa, si lo tienes claro, comenta la línea entera */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  min-height: 100vh;
+}
+
+section {
+  background-color: yellow; /* El color es para que veas el espacio visual que ocupa, si lo tienes claro, comenta la línea entera */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  min-height: 90vh;
+}
+
+section article {
+  background-color: red; /* El color es para que veas el espacio visual que ocupa, si lo tienes claro, comenta la línea entera */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 70vh;
+}
+
+
