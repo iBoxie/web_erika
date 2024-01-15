@@ -1,0 +1,91 @@
+:root {
+  /* Set neon color */
+  --neon-text-color: rgb(195, 0, 255);
+}
+
+header {
+  top: 0;
+  padding: 1vw 15vw;
+  width: 100vw;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  z-index: 1;
+  gap: 5vw;
+}
+
+header h1 {
+  padding: 50px 0px;
+  font-size: 4vw;
+  line-height: 90%;
+  background: rgb(157, 116, 134);
+  background: radial-gradient(
+    circle,
+    rgba(157, 116, 134, 1) 0%,
+    rgba(100, 126, 157, 1) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: black;
+  animation: flicker 1.5s infinite alternate;
+}
+
+header h1::-moz-selection {
+  background-color: var(--neon-border-color);
+  color: var(--neon-text-color);
+}
+header h1:focus {
+  outline: none;
+}
+@keyframes flicker {
+  10%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  90%,
+  100% {
+    text-shadow: -0.2rem -0.2rem 1rem #fac991, 0.2rem 0.2rem 1rem #f49cfc,
+      0 0 0.1rem var(--neon-text-color), 0 0 0.1rem var(--neon-text-color),
+      0 0 0.1rem var(--neon-text-color), 0 0 0.1rem var(--neon-text-color),
+      0 0 0.1rem var(--neon-text-color);
+  }
+
+  0%,
+  5%,
+  24%,
+  70%,
+  95% {
+    text-shadow: none;
+  }
+}
+
+header nav {
+  font-size: 1.7vw;
+  width: 70vw;
+  min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5vw;
+}
