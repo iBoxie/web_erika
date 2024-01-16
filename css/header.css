@@ -93,7 +93,6 @@ nav button a {
 }
 
 .btn:hover{
-  transform: scale(115%);
   transition: all 0.6s ease;
   -webkit-animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
           animation: shake-top 0.8s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
